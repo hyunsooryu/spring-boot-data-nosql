@@ -24,13 +24,13 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class RedisRunner implements ApplicationRunner {
 
-   private final StringRedisTemplate redisTemplate;
+    private final StringRedisTemplate redisTemplate;
 
-   private final LettuceConnectionFactory lettuceConnectionFactory;
+    private final LettuceConnectionFactory lettuceConnectionFactory;
 
-   private final AccountRepository accountRepository;
+    private final AccountRepository accountRepository;
 
- //  private final PersonRepository personRepository;
+    //  private final PersonRepository personRepository;
 
     private final RedisTemplate<byte[], byte[]> tmpRedisTemplate;
 
@@ -39,18 +39,18 @@ public class RedisRunner implements ApplicationRunner {
 
 
         /**
-        ValueOperations<String, String> values = redisTemplate.opsForValue();
-        values.set("hyunsoo", "gsshop-developer");
-        values.set("springboot", "master");
-        values.set("hello", "world");
+         ValueOperations<String, String> values = redisTemplate.opsForValue();
+         values.set("hyunsoo", "gsshop-developer");
+         values.set("springboot", "master");
+         values.set("hello", "world");
          **/
         /**
-        Account account = new Account();
-        account.setId("fuck");
-        account.setEmail("blessdutch@naver.com");
-        account.setUsername("hyunsoo");
+         Account account = new Account();
+         account.setId("fuck");
+         account.setEmail("blessdutch@naver.com");
+         account.setUsername("hyunsoo");
 
-        Account account1 = accountRepository.save(account);
+         Account account1 = accountRepository.save(account);
          **/
 
 

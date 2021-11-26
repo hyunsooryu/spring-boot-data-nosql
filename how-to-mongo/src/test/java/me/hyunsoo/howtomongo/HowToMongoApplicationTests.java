@@ -19,14 +19,14 @@ class HowToMongoApplicationTests {
     AccountRepository accountRepository;
 
     @Test
-    void findAccountByIdTest(){
+    void findAccountByIdTest() {
 
-       Account account1 = new Account();
-       account1.setId("account-1");
-       account1.setUsername("user-1");
-       account1.setEmail("aaa.bbb.com");
+        Account account1 = new Account();
+        account1.setId("account-1");
+        account1.setUsername("user-1");
+        account1.setEmail("aaa.bbb.com");
 
-       accountRepository.insert(account1);
+        accountRepository.insert(account1);
 
         Account account2 = new Account();
         account2.setId("account-2");
@@ -36,12 +36,12 @@ class HowToMongoApplicationTests {
         accountRepository.insert(account2);
 
 
-       List<Account> accountList =  accountRepository.findAll();
-       accountList.stream().forEach(System.out::println);
-       Optional<Account> account3 = accountRepository.findByEmail("aaa.bbb.com");
-       System.out.println(account3.orElse(null));
-       Optional<Account> account4 = accountRepository.findById("account-2");
-       System.out.println(account4.orElse(null));
+        List<Account> accountList = accountRepository.findAll();
+        accountList.stream().forEach(System.out::println);
+        Optional<Account> account3 = accountRepository.findByEmail("aaa.bbb.com");
+        System.out.println(account3.orElse(null));
+        Optional<Account> account4 = accountRepository.findById("account-2");
+        System.out.println(account4.orElse(null));
     }
 
 }
